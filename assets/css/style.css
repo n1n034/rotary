@@ -6,10 +6,11 @@
 body{
     font-family: "Overpass", sans-serif;
     letter-spacing: -1px;
+    -webkit-text-size-adjust: none;
 }
 .container{
     display: flex;
-    margin: 50px;
+    margin: 30px 60px;
 }
 
 .menu-toggle-box {
@@ -177,7 +178,7 @@ body{
 .donirajte .doniraj .toggle-popup{
     text-decoration: none;
     padding: 15px 50px;
-    background-color: #BF2121;
+    background: #FF4E27;
     color: #fff;
     border-radius: 40px;
     font-size: 20px;
@@ -188,7 +189,7 @@ body{
     text-decoration: none;
     padding: 15px 50px;
     background-color: #fff;
-    color: #BF2121;
+    color: #FF4E27;
     border-radius: 40px;
     font-size: 20px;
     font-weight: 700;
@@ -268,7 +269,7 @@ body{
 .container-donacija{
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: 30px;
     font-size: 24px;
     text-wrap: balance;
     width: 50%;
@@ -348,9 +349,7 @@ body{
     font-weight: 700;
     line-height: 1.1;
 }
-.gallery .container {
-    margin-right: 0;
-}
+
 
 .donacija-popup {
     position: fixed;
@@ -655,7 +654,7 @@ input[type=number] {
     background: #9CDAF3;
     height: auto;
     text-align: center;
-    padding: 60px;
+    padding: 70px 80px;
     font-weight: 400;
     font-size: 18px;
     text-wrap: balance;
@@ -681,14 +680,14 @@ input[type=number] {
     display: flex;
     flex-direction: column;
     flex: 0 0 auto;
-    background-color: #E7E7E7;
+    background: #F9D4A6;
     border-radius: 30px;
     width: 50%;
     text-align: center;
     align-items: center;
 }
 .empatija-prijava img {
-    width: 80%;
+    width: 45%;
     padding: 70px 70px 35px 70px;
 }
 .empatija-prijava h2{
@@ -721,7 +720,7 @@ input[type=number] {
 .donirajte-prijava .doniraj .toggle-popup{
     text-decoration: none;
     padding: 15px 50px;
-    background-color: #BF2121;
+    background: #FF4E27;
     color: #fff;
     border-radius: 40px;
     font-size: 20px;
@@ -881,7 +880,206 @@ input[type=number] {
     .saznaj-vise a {
         font-weight: 700;
         font-size: 14px;
-        padding: 12px 20px;
+        padding: 12px 18px;
+    }
+    .copyright {
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+    .footer-text {
+        font-size: 20px;
+        padding: 0;
+    }
+    .javite-nam-se {
+        margin-top: 15px;
+    }
+    .javite-nam-se a {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+    .footer-slike {
+        display: block;
+        text-align: center;
+    }
+    .footer-slike img {
+        margin: 25px 20px 0 20px;
+        padding-left: 0;
+        height: 5vh;
+    }
+    .pozadina .bijeli-logo {
+        padding: 0;
+        top: 30px;
+    }
+    .donacija-popup .container .donacija-slika {
+        margin-right: 10px;
+    }
+    .donacija-popup .container .donacija-uplata {
+        margin-left: 0;
+    }
+    .donacija-popup .container {
+        height: 550px;
+    }
+    .donacija-slika {
+        width: 50%;
+    }
+    .donacija-uplata {
+        width: 50%;
+        padding: 15px;
+    }
+    .donacija-text {
+        padding: 15px;
+        font-size: 16px;
+    }
+    .donacija-text h3 {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    .donacija-uplata h3 {
+        padding: 0;
+        font-size: 18px;
+        text-align: left;
+    }
+    .donacija-uplata p {
+        font-size: 18px;
+    }
+    .cards {
+        margin: 0;
+    }
+    .card label {
+        font-size: 22px;
+        padding: 15px;
+    }
+    .card label span {
+        font-size: 18px;
+        margin: 0;
+    }
+    .card:not(:last-child) {
+        margin-right: 0;
+    }
+    .iznos input {
+        margin: 15px 0;
+    }
+    input[type=radio] {
+        position: absolute;
+    }
+    input[type=number] {
+        padding: 10px;
+        font-size: 20px;
+    }
+    .donacija-uplata p:last-of-type {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .donacija-uplata .button {
+        font-size: 18px;
+        border: 1.5px solid #000;
+    }
+    .naslov-flex {
+        margin-bottom: 15px;
+    }
+    .close-popup img {
+        width: 22px;
+    }
+
+
+    .o-projektu h2 {
+        font-size: 30px;
+        font-weight: 700;
+        text-wrap: nowrap;
+        padding-bottom: 20px;
+    }
+    .o-projektu {
+        padding: 30px;
+        font-size: 16px;
+    }
+    .cilj-akcije {
+        padding: 30px;
+        font-size: 16px;
+    }
+    .container-prijava {
+        margin: 20px;
+    }
+    .donirajte-prijava {
+        padding: 50px 0 20px 0;
+    }
+    .donirajte-prijava h2 {
+        margin-bottom: 0;
+    }
+    .donirajte-prijava span {
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .donirajte-prijava .doniraj .toggle-popup {
+        padding: 12px 12px;
+        font-size: 14px;
+    }
+    .empatija-prijava {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .empatija-prijava img {
+        padding: 20px 0px;
+    }
+    .humanitarna-akcija {
+        display: block;
+    }
+    .projekt-flex {
+        margin-right: 0;
+    }
+    .clanci {
+        margin: 0 10px 10px 0;
+        width: 44%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    
+    .o-projektu h2 {
+        font-size: 30px;
+        font-weight: 700;
+        text-wrap: nowrap;
+        padding-bottom: 20px;
+    }
+    .o-projektu {
+        padding: 30px;
+        font-size: 16px;
+    }
+    .cilj-akcije {
+        padding: 30px;
+        font-size: 16px;
+    }
+    .container-prijava {
+        margin: 20px;
+    }
+    .donirajte-prijava {
+        padding: 50px 0 20px 0;
+    }
+    .donirajte-prijava h2 {
+        margin-bottom: 0;
+    }
+    .donirajte-prijava span {
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .donirajte-prijava .doniraj .toggle-popup {
+        padding: 12px 12px;
+        font-size: 14px;
+    }
+    .empatija-prijava {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .empatija-prijava img {
+        padding: 20px 0px;
+        width: 60%;
+    }
+    .humanitarna-akcija {
+        display: block;
+    }
+    .projekt-flex {
+        margin-right: 0;
     }
     .copyright {
         height: auto;
@@ -1027,87 +1225,22 @@ input[type=number] {
     .projekt-flex {
         margin-right: 0;
     }
-    .clanci {
-        margin: 0 10px 10px 0;
-        width: 47%;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .o-projektu h2 {
-        font-size: 30px;
-        font-weight: 700;
-        text-wrap: nowrap;
-        padding-bottom: 20px;
-    }
-    .o-projektu {
-        padding: 30px;
-        font-size: 16px;
-    }
-    .cilj-akcije {
-        padding: 30px;
-        font-size: 16px;
-    }
-    .container-prijava {
-        margin: 20px;
-    }
-    .donirajte-prijava {
-        padding: 50px 0 20px 0;
-    }
-    .donirajte-prijava h2 {
-        margin-bottom: 0;
-    }
-    .donirajte-prijava span {
-        font-size: 20px;
-        font-weight: 900;
-    }
-    .donirajte-prijava .doniraj .toggle-popup {
-        padding: 12px 12px;
-        font-size: 14px;
-    }
-    .empatija-prijava {
-        margin-top: 20px;
-        width: 100%;
-    }
-    .empatija-prijava img {
-        padding: 20px 0px;
-        width: 60%;
-    }
-    .humanitarna-akcija {
-        display: block;
-    }
-    .projekt-flex {
-        margin-right: 0;
-    }
-    .copyright {
-        height: auto;
-        display: flex;
-        flex-direction: column-reverse;
-        padding: 20px;
-    }
-    .footer-text {
-        font-size: 20px;
-        padding: 0;
-    }
-    .javite-nam-se {
-        margin-top: 15px;
-    }
-    .javite-nam-se a {
-        font-size: 16px;
-        padding: 12px 30px;
-    }
-    .footer-slike {
-        display: block;
-        text-align: center;
-    }
-    .footer-slike img {
-        margin: 25px 20px 0 20px;
-        padding-left: 0;
-        height: 5vh;
-    }
+    
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    
+    .clanci {
+        margin: 0 20px 20px 0;
+        width: 46.9%;
+    }
+    .menu {
+        width: 80%;
+        right: 75px;
+        top: 45px;
+    }
+    .menu-toggle-box {
+        right: 90px;
+        top: 60px;
+    }
 }
 
