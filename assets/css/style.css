@@ -6,7 +6,6 @@
 body{
     font-family: "Overpass", sans-serif;
     letter-spacing: -1px;
-    -webkit-text-size-adjust: none;
 }
 .container{
     display: flex;
@@ -761,6 +760,10 @@ input[type=number] {
     .container {
         margin: 20px;
     }
+    .donirajte-prijava span {
+        font-size: 45px;
+        font-weight: 700;
+    }
     .donirajte {
         padding: 50px 0 0;
     }
@@ -768,8 +771,9 @@ input[type=number] {
         margin-bottom: 0;
     }
     .donirajte span {
+        color: #000;
+        text-decoration: none;
         font-size: 20px;
-        font-weight: 900;
     }
     .donirajte .doniraj .toggle-popup {
         padding: 12px 12px;
@@ -807,9 +811,12 @@ input[type=number] {
         font-size: 16px;
     }
     .nacini {
-        font-size: 20px;
-        padding: 0 25px;
+        height: 250px;
+        text-align: center;
+        font-size: 40px;
         top: 25px;
+        position: relative;
+        margin-bottom: 20px;
     }
     .nastupaju h2 {
         font-size: 20px;
@@ -821,10 +828,13 @@ input[type=number] {
         font-size: 18px;
     }
     .nastupaju2 span {
-        font-size: 16px;
+        font-size: 22px;
     }    
     .lijevo img {
         padding: 20px 0px;
+    }
+    .hug {
+        width: 100%;
     }
     .donacija-box p {
         padding: 20px 0;
@@ -842,7 +852,7 @@ input[type=number] {
         padding: 15px;
     }
     .donacija-box.poziv span {
-        font-size: 20px;
+        font-size:  40px;
         font-weight: 900;
     }
     .glavna {
@@ -860,7 +870,9 @@ input[type=number] {
         padding: 30px 0 0;
     }
     .container-donacija {
-        font-size: 16px;
+        font-size: 20px;
+        margin-left: 0;
+        width: 100%;
     }
     .number {
         width: 45px;
@@ -1007,10 +1019,7 @@ input[type=number] {
     .donirajte-prijava h2 {
         margin-bottom: 0;
     }
-    .donirajte-prijava span {
-        font-size: 20px;
-        font-weight: 900;
-    }
+    
     .donirajte-prijava .doniraj .toggle-popup {
         padding: 12px 12px;
         font-size: 14px;
@@ -1035,7 +1044,38 @@ input[type=number] {
 }
 
 @media only screen and (max-width: 991px) {
+    .glavna {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .zajedno img {
+        margin-left: 0;
+    }
+    .zajedno {
+        width: 100%;
+    }
+    .humanitarno {
+        width: 100%;
+        padding: 30px 0 0;
+    }
+    .container-donacija {
+        font-size: 24px;
+    }
+    .number {
+        width: 45px;
+        height: 45px;
+        margin-right: 0;
+    }
     
+    .saznaj-vise {
+        margin: 25px 0 15px;
+    }
+    .text {
+        padding: 15px;
+    }
+    .text h3 {
+        font-size: 20px;
+    }
     .o-projektu h2 {
         font-size: 30px;
         font-weight: 700;
@@ -1059,10 +1099,7 @@ input[type=number] {
     .donirajte-prijava h2 {
         margin-bottom: 0;
     }
-    .donirajte-prijava span {
-        font-size: 20px;
-        font-weight: 900;
-    }
+    
     .donirajte-prijava .doniraj .toggle-popup {
         padding: 12px 12px;
         font-size: 14px;
@@ -1110,6 +1147,9 @@ input[type=number] {
     .pozadina .bijeli-logo {
         padding: 0;
         top: 30px;
+    }
+    .donacija .container {
+        display: block;
     }
     .donacija-popup .container .donacija-slika {
         margin-right: 10px;
@@ -1204,10 +1244,7 @@ input[type=number] {
     .donirajte-prijava h2 {
         margin-bottom: 0;
     }
-    .donirajte-prijava span {
-        font-size: 20px;
-        font-weight: 900;
-    }
+
     .donirajte-prijava .doniraj .toggle-popup {
         padding: 12px 12px;
         font-size: 14px;
@@ -1233,6 +1270,12 @@ input[type=number] {
         margin: 0 20px 20px 0;
         width: 46.9%;
     }
+    .donirajte {
+        padding: 200px 0 0 0;
+    }
+    .donirajte h2 {
+        margin-bottom: 0;
+    }
     .menu {
         width: 80%;
         right: 75px;
@@ -1242,5 +1285,39 @@ input[type=number] {
         right: 90px;
         top: 60px;
     }
+    .donacija .flex {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding-bottom: 0;
+        flex-direction: column;
+    }
+    .donirajte span {
+        font-size: 50px;
+    }
+    .donacija-box.poziv span {
+        font-size: 40px;
+    }  
+    .doniraj .toggle-popup {
+        text-decoration: none;
+        padding: 15px 30px;
+    }
+    .nacini {
+        font-size: 50px;
+        padding: 0 25px;
+        top: 25px;
+    }
+    .nastupaju h2 {
+        font-size: 40px;
+    }
+    .nastupaju span {
+        font-size: 40px;
+    }   
+    .nastupaju2 h2 {
+        font-size: 18px;
+    }
+    .nastupaju2 span {
+        font-size: 16px;
+    }    
 }
 
