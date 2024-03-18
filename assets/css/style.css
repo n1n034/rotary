@@ -166,6 +166,8 @@ body{
     margin: 15px 0 0 0;
     font-size: 70px;
     font-weight: 700;
+    text-decoration: none;
+    color: inherit;
 }
 .donirajte .doniraj {
     display: flex;
@@ -336,6 +338,8 @@ body{
     line-height: 1;
     font-weight: 700;
     margin: 0 auto;
+    text-decoration: none;
+    color: inherit;
 }
 .nastupaju2  h2{
     text-align: center;
@@ -708,6 +712,7 @@ input[type=number] {
     margin: 15px 0 0 0;
     font-size: 70px;
     font-weight: 700;
+    text-decoration: none;
 }
 .donirajte-prijava .doniraj {
     display: flex;
