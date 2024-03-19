@@ -162,11 +162,12 @@ body{
 .donirajte h2 {
     margin-bottom: 40px;
 }
-.donirajte span {
+.donirajte a {
     display: block;
     margin: 15px 0 0 0;
-    font-size: 70px;
+    font-size: 45px;
     font-weight: 700;
+    color: #000;
     text-decoration: none;
     color: inherit;
 }
@@ -783,12 +784,10 @@ input[type=number] {
         padding: 50px 0 0;
     }
     .donirajte h2 {
-        margin-bottom: 0;
+        margin-bottom: 15px;
     }
-    .donirajte span {
-        color: #000;
-        text-decoration: none;
-        font-size: 50px;
+    .donirajte a {
+        font-size: 45px;
     }
     .donirajte .doniraj .toggle-popup {
         padding: 12px 12px;
@@ -846,7 +845,7 @@ input[type=number] {
         font-size: 22px;
     }    
     .lijevo img {
-        padding: 20px 0px;
+        padding: 70px 0 20px 0px;
     }
     .hug {
         width: 100%;
