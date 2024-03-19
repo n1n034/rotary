@@ -6,6 +6,7 @@
 body{
     font-family: "Overpass", sans-serif;
     letter-spacing: -1px;
+    -webkit-text-size-adjust: none;
 }
 .container{
     display: flex;
@@ -650,7 +651,18 @@ input[type=number] {
     flex-direction: row;
 }
 .projekt-flex {
-    margin-right: 20px;
+    margin-right: 0;
+}
+.clanci {
+    margin: 0 0 25px 0;
+    width: 100%;
+}
+.col-50 {
+    padding: 0 20px;
+    width: 33%;
+}
+.clanci-flex{
+    margin: 0 -25px;
 }
 .o-projektu {
     border-radius: 30px;
@@ -738,8 +750,6 @@ input[type=number] {
 }
 .clanci {
     border-radius: 30px;
-    margin: 0 20px 20px 0;
-    width: 31.9%;
 }
 .clanci img {
     width: 100%;
@@ -800,8 +810,8 @@ input[type=number] {
         font-size: 25px;
     }
     .menu-toggle {
-        width: 24px;
-        height: 20px;
+        width: 20px;
+        height: 16px;
     }
     .menu-toggle-box {
         height: 35px;
@@ -930,13 +940,15 @@ input[type=number] {
         top: 30px;
     }
     .donacija-popup .container .donacija-slika {
-        margin-right: 10px;
+        margin-bottom: 12px;
+        margin-right: 0;
     }
     .donacija-popup .container .donacija-uplata {
         margin-left: 0;
     }
     .donacija-popup .container {
         height: 550px;
+        display: block;
     }
     .donacija-slika {
         width: 50%;
@@ -973,7 +985,7 @@ input[type=number] {
         margin: 0;
     }
     .card:not(:last-child) {
-        margin-right: 0;
+        margin-right: 30px;
     }
     .iznos input {
         margin: 15px 0;
@@ -1039,13 +1051,7 @@ input[type=number] {
     .humanitarna-akcija {
         display: block;
     }
-    .projekt-flex {
-        margin-right: 0;
-    }
-    .clanci {
-        margin: 0 10px 10px 0;
-        width: 44%;
-    }
+    
 }
 
 @media only screen and (max-width: 991px) {
@@ -1065,7 +1071,7 @@ input[type=number] {
     }
     .humanitarno {
         width: 100%;
-        padding: 30px 0 0;
+        padding: 0;
     }
     .container-donacija {
         margin-left: 0; 
@@ -1086,6 +1092,14 @@ input[type=number] {
     }
     .text h3 {
         font-size: 20px;
+        word-break: break-word;
+        margin-bottom: 12px;
+    }
+    .text p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
     }
     .o-projektu h2 {
         font-size: 30px;
@@ -1163,13 +1177,17 @@ input[type=number] {
         display: block;
     }
     .donacija-popup .container .donacija-slika {
-        margin-right: 10px;
+        margin-right: 0;
+        height: 260px;
+        margin-bottom: 12px;
+        width: 100%;
     }
     .donacija-popup .container .donacija-uplata {
-        margin-left: 0;
+        height: 370px;
+        width: 100%;
     }
     .donacija-popup .container {
-        height: 550px;
+        height: 100%;
     }
     .donacija-slika {
         width: 50%;
@@ -1205,9 +1223,7 @@ input[type=number] {
         font-size: 18px;
         margin: 0;
     }
-    .card:not(:last-child) {
-        margin-right: 0;
-    }
+    
     .iznos input {
         margin: 15px 0;
     }
@@ -1273,21 +1289,42 @@ input[type=number] {
     .projekt-flex {
         margin-right: 0;
     }
-    
+    .clanci {
+        margin: 0 0 16px 0;
+        width: 100%;
+    }
+    .col-50 {
+        padding: 0 5px;
+        width: 50%;
+    }
+    .clanci-flex{
+        margin: 0 -5px;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .menu-toggle {  
+        width: 30px;
+        height: 24px;
+    }
     .glavna {
-        flex-direction: column;
-        padding: 20px;
+        flex-direction: column-reverse;
+        padding: 20px 20px 0 20px;
     }
-    .clanci {
-        margin: 0 20px 20px 0;
-        width: 46.9%;
+    .container {
+        display: block;
+        margin: 30px;
     }
+    .desno {
+        width: 100%;
+        margin-top: 30px;
+        height: 500px;
+    }
+    
     .donirajte {
-        padding: 200px 0 0 0;
+        padding: 120px 0 0 0;
     }
+
     .donirajte h2 {
         margin-bottom: 0;
     }
@@ -1299,6 +1336,10 @@ input[type=number] {
     .menu-toggle-box {
         right: 90px;
         top: 60px;
+    }
+    .donacija-text {
+        padding: 35px 20px;
+        font-size: 16px;
     }
     .donacija .flex {
         text-align: center;
@@ -1317,6 +1358,11 @@ input[type=number] {
         text-decoration: none;
         padding: 15px 30px;
     }
+    .card:not(:last-child) {
+        margin-right: 60px;
+    }
+    
+    
     .nacini {
         height: 250px;
         text-align: center;
@@ -1339,5 +1385,37 @@ input[type=number] {
     .hug {
         width: 100%;
     }    
+    .donacija .container {
+        display: block;
+    }
+    .donacija-popup .container .donacija-slika {
+        margin-right: 0;
+        height: 400px;
+        margin-bottom: 12px;
+        width: 100%;
+    }
+    .donacija-popup .container .donacija-uplata {
+        height: 550px;
+        width: 100%;
+        margin-left: 0;
+    }
+    .donacija-popup .container {
+        display: block;
+    }
+    .donacija-slika {
+        width: 50%;
+    }
+    .donacija-uplata {
+        width: 50%;
+        padding: 15px;
+    }
+    .card label {
+        font-size: 40px;
+        padding: 30px;
+    }
+    .pozadina .bijeli-logo {
+        width: 60%;
+    }
+    
 }
 
