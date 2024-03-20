@@ -332,7 +332,7 @@ body{
     background-color: #fff;
     color: #FF4E27 !important;
 }
-.donacija-box.poziv span {
+.donacija-box.poziv a {
     display: block;
     margin: 15px 0 0 0;
     font-size: 70px;
@@ -871,7 +871,7 @@ input[type=number] {
     .donacija-box {
         padding: 15px;
     }
-    .donacija-box.poziv span {
+    .donacija-box.poziv a {
         font-size:  40px;
         font-weight: 900;
     }
@@ -1342,7 +1342,7 @@ input[type=number] {
     .donirajte span {
         font-size: 50px;
     }
-    .donacija-box.poziv span {
+    .donacija-box.poziv a {
         font-size: 40px;
     }  
     .doniraj .toggle-popup {
