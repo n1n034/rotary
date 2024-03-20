@@ -782,7 +782,7 @@ input[type=number] {
         margin-top: 20px;
         height: 300px;
     }
-    .donirajte-prijava span {
+    .donirajte-prijava a {
         font-size: 45px;
         font-weight: 700;
     }
@@ -1137,6 +1137,7 @@ input[type=number] {
     .empatija-prijava {
         margin-top: 20px;
         width: 100%;
+        margin-left: 0;
     }
     .empatija-prijava img {
         padding: 20px 0px;
