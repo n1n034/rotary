@@ -1,0 +1,1427 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Overpass", sans-serif;
+    letter-spacing: -1px;
+    -webkit-text-size-adjust: none;
+}
+.container{
+    display: flex;
+    margin: 30px 60px;
+}
+
+.menu-toggle-box {
+    position: fixed;
+    right: 100px;
+    top: 100px;
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 34px;
+    height: 26px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background: #fff;
+    border-radius: 30px;
+    padding: 30px 25px;
+    top: 80px;
+    right: 80px;
+    width: 40%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 8;
+}
+.menu a {
+    padding: 0;
+    display: block;
+    line-height: 1.2;
+    text-decoration: none;    
+    color: #EE5A28;
+    font-size: 40px;
+    font-weight: 900;
+    text-wrap: balance;
+}
+
+.menu a:not(:last-child) {
+    padding-bottom: 30px;
+}
+
+.menu .terms-menu a:not(:last-child) {
+    padding-bottom: 10px;
+}
+
+.small-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+.small-menu a{
+    font-size: 20px;
+}
+.socials a{
+    display: inline-block;
+}
+
+.menu .socials a:not(:last-child) {
+    margin-right: 30px;
+    padding-bottom: 0;
+}
+.menu-toggle .bar {
+    padding: 2px;
+    position: absolute;
+    border-radius: 20px;
+    display: block;
+    background: #CE181E;
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s;
+}
+.menu-toggle .bar1{
+    top: 0;
+}
+.menu-toggle .bar2{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.menu-toggle .bar3{
+    bottom: 0;
+}
+.menu-active .menu-toggle .bar.bar1 {
+    top: 50%;
+    transform: translateY(0) rotate(45deg);
+    left: 0;
+}
+.menu-active .menu-toggle .bar.bar2 {
+    opacity: 0;
+}
+.menu-active .menu-toggle .bar.bar3 {
+    top: 50%;
+    left: 0;
+    bottom: auto;
+    transform: translateY(0) rotate(-45deg);
+}
+
+.menu-active .menu {   
+    opacity: 1;
+    pointer-events: inherit;
+}
+.lijevo {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    background-color: #E7E7E7;
+    border-radius: 30px;
+    padding: 15px;
+    margin-right: 20px;
+    width: 50%;
+    text-align: center;
+}
+.lijevo img {
+    width: 100%;
+    padding: 70px 70px 40px 70px;
+}
+.lijevo h2{
+    text-wrap: balance;
+    font-size: 16px;
+}
+
+.desno {
+    background-image: url('/rotary/assets/images/naslovpozadina.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    width: 50%;
+}
+.donirajte {
+    display: flex;
+    flex-direction: column;
+    padding: 200px 0 40px 0;
+    margin-top: auto;
+}
+.donirajte h2 {
+    margin-bottom: 40px;
+}
+.donirajte a {
+    display: block;
+    margin: 15px 0 0 0;
+    font-size: 80px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+}
+.donirajte .doniraj {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.donirajte .doniraj .toggle-popup{
+    text-decoration: none;
+    padding: 15px 50px;
+    background: #FF4E27;
+    color: #fff;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.doniraj .toggle-popup {
+    text-decoration: none;
+    padding: 15px 50px;
+    background-color: #fff;
+    color: #FF4E27;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.glavna {
+    display: flex;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #F9D4A6; 
+}
+.zajedno{
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.zajedno img {
+    display: block;
+    width: 100%;
+    margin-left: -40px;
+}
+
+.humanitarno {
+    position: relative;
+    width: 50%;
+    padding: 50px 0;
+    text-align: left;
+}
+
+.humanitarno img {
+    display: block;
+    width: 70%;
+    margin: 0 auto 0 auto;
+}
+
+.podrzi {
+    position: absolute;
+    z-index: 2;
+}
+
+.nastupaju h2 {
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.nastupaju span {
+    display: block;
+    font-size: 60px;
+    margin-top: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-wrap: balance;
+}
+
+.hug {
+    position: relative;
+    background-image: url('/rotary/assets/images/zagrljaj.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    width: 50%;
+}
+.nacini {
+    position: absolute;
+    top: 50px;
+    color: #fff;
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 50px;
+    width: 100%;
+    line-height: 1.2;
+}
+
+.container-donacija{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    font-size: 24px;
+    text-wrap: balance;
+    width: 50%;
+}
+
+.container-donacija .donacija-box:last-child {
+    margin-bottom: 0;
+}
+
+.donacija .flex {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 150px;
+}
+
+.number {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin-right: 40px;
+    border-radius: 50%;
+    background: #fff;
+    font-weight: 700;
+}
+
+.donacija-box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    padding: 40px; 
+}
+.donacija-box p {
+    max-width: 500px;
+    margin-top: 0;
+}
+.uplata {
+    background-color: #FFB1B1;  
+}
+.poziv{
+    background-color: #BBEFA1;
+}
+
+.kupnja{
+    background-color: #F9D4A6;
+}
+.donacija-box.uplata .doniraj  {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.donacija-box.uplata .doniraj a{
+    background-color: #fff;
+    color: #FF4E27 !important;
+}
+.donacija-box.poziv a {
+    display: block;
+    margin: 15px 0 0 0;
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 700;
+    margin: 0 auto;
+    text-decoration: none;
+    color: inherit;
+}
+.nastupaju2  h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+.nastupaju2 span {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+
+.donacija-popup {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    opacity: 0;
+    transition: opacity 0.7s;
+    pointer-events: none;
+}
+
+.naslov-flex {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.close-popup img {
+    cursor: pointer;      
+}
+.donacija-popup .container { 
+    justify-content: center;
+    height: 900px;
+}
+.donacija-popup .container .donacija-slika {
+    margin-right: 20px;
+    background: #fff;
+}
+.donacija-popup .container .donacija-uplata {
+    margin-left: 20px;
+    background: #fff;
+}
+
+.donacija-popup-active {
+    overflow: hidden;
+}
+
+.donacija-popup-active:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+.donacija-popup-active .donacija-popup {
+    opacity: 1;
+    pointer-events: inherit;
+}
+
+.donacija-slika {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    align-items: flex-end;
+    border-radius: 30px;
+}
+
+.donacija-text {
+    padding: 50px 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    text-wrap: balance;
+}
+.donacija-text h3 {
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.pozadina {
+    background-image: url('/rotary/assets/images/drustvo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 700px;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.pozadina .bijeli-logo {
+    position: absolute;
+    padding: 0 50px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    margin: 0 auto;
+}
+
+.donacija-uplata {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border-radius: 30px;
+    padding: 30px;
+}
+.donacija-uplata h3 {
+    font-size: 40px;
+    font-weight: 700;
+}
+.donacija-uplata p{
+    font-size: 30px;
+    font-weight: 400;
+}
+.donacija-uplata p:last-of-type {
+    font-weight: 400;
+    text-wrap: balance;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.cards {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+.card label{
+    color: #000;
+    font-size: 80px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    padding: 25px 25px;
+    box-shadow: 7px 7px 15px rgba(2,28,53,0.08);
+    border-radius: 30px;
+    background: #EFEFEF;
+}
+.card:not(:last-child) {
+    margin-right: 30px;
+} 
+
+.card label span {
+    font-size: 35px;
+    font-weight: 400;
+    margin-left: -15px;
+}
+input[type=radio]{
+    appearance: none;
+    width: 150px;
+    cursor: pointer;
+}
+input[type=radio]:checked + label {
+    background: #BBEFA1;
+}
+input[type=number] {
+    padding: 25px;
+    border: none;
+    width: 100%;
+    border-radius: 30px;
+    background: #EFEFEF;
+    outline: none;
+    font-size: 35px;
+    font-weight: 400;
+}
+.iznos input{
+    margin: 40px 0;
+    box-shadow: 7px 7px 15px rgba(2,28,53,0.08);
+}
+.donacija-uplata .button{
+    font-size: 40px;
+    font-weight: 700;
+    border-radius: 30px;
+    border: 3px solid #000;
+    background: #EFEFEF;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    cursor: pointer;
+}
+.donacija-uplata .button:focus {
+    background: #BBEFA1;
+}
+.swiper-slide {
+    border-radius: 30px;
+}
+.swiper-slide.pink {
+    background: #FFB1B1;
+}
+.swiper-slide.blue {
+    background: #9CDAF3;
+}
+.swiper-slide.green {
+    background: #BBEFA1;
+}
+.swiper-slide.yellow {
+    background: yellow;
+}
+.swiper-slide.violet {
+    background: violet;
+}
+.swiper-slide img {
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.text h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 20px;
+   
+}
+.text {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    font-size: 20px;
+    text-wrap: balance;
+}
+
+.text > div:first-child {
+    max-width: 470px;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.saznaj-vise {
+    margin-top: 70px;
+}
+.saznaj-vise a{
+    border-radius: 40px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 15px 50px;
+    text-decoration: none;
+}
+.copyright {
+    border-radius: 30px;
+    background: #E7E7E7;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-slike img {
+    padding-left: 60px;
+    height: 3.5vw;
+    width: auto;
+}
+.footer-text {
+    font-weight: 800;
+    font-size: 35px;
+    padding: 50px;
+    text-wrap: balance;
+    text-align: center;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.javite-nam-se {
+    margin-top: 30px;
+}
+.javite-nam-se a{
+    border-radius: 40px;
+    color: #000;
+    font-size: 20px;
+    padding: 15px 50px;
+    text-decoration: none;
+    font-weight: 400;
+    border: 1px solid #000;
+}
+.footer-slike {
+    display: flex;
+}
+
+.naslovna-pozadina img {
+    width: 100%;
+    border-radius: 30px;
+}
+.humanitarna-akcija {
+    display: flex;
+    flex-direction: row;
+}
+.projekt-flex {
+    margin-right: 10px;
+}
+.clanci {
+    margin: 0 0 25px 0;
+    width: 100%;
+}
+.col-50 {
+    padding: 0 20px;
+    width: 33%;
+}
+.clanci-flex{
+    margin: 0 -25px;
+}
+.o-projektu {
+    border-radius: 30px;
+    background: #9CDAF3;
+    height: auto;
+    text-align: center;
+    padding: 70px 80px;
+    font-weight: 400;
+    font-size: 18px;
+    text-wrap: balance;
+    margin-bottom: 20px;
+}
+.o-projektu h2{
+    font-size: 60px;
+    font-weight: 700;
+    padding-bottom: 50px;
+}
+.cilj-akcije {
+    border-radius: 30px;
+    background: #FFB1B1;
+    height: auto;
+    text-align: center;
+    padding: 70px 80px;
+    font-weight: 400;
+    font-size: 18px;
+    text-wrap: balance;
+}
+
+.empatija-prijava {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    background: #F9D4A6;
+    border-radius: 30px;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.empatija-prijava img {
+    width: 45%;
+    padding: 70px 70px 35px 70px;
+}
+.empatija-prijava h2{
+    text-wrap: balance;
+    font-size: 16px;
+}
+.donirajte-prijava {
+    display: flex;
+    flex-direction: column;
+    padding: 130px 0 40px 0;
+    margin-top: auto;
+}
+
+.donirajte-prijava h2 {
+    margin-bottom: 40px;
+}
+.donirajte-prijava a {
+    display: block;
+    margin: 15px 0 0 0;
+    font-size: 70px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+}
+.donirajte-prijava .doniraj {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.donirajte-prijava .doniraj .toggle-popup{
+    text-decoration: none;
+    padding: 15px 50px;
+    background: #FF4E27;
+    color: #fff;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.clanci-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.clanci {
+    border-radius: 30px;
+}
+.clanci img {
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.clanci.pink {
+    background: #FFB1B1;
+}
+.clanci.blue {
+    background: #9CDAF3;
+}
+.clanci.yellow {
+    background: #F9D4A6;
+}
+.clanci.grey {
+    background: #E7E7E7;
+}
+.clanci.green {
+    background: #BBEFA1;
+}
+@media only screen and (max-width: 767px) {
+    .container {
+        margin: 20px;
+        display: block;
+    }
+    .desno {
+        margin-top: 20px;
+        height: 300px;
+    }
+    .donirajte-prijava a {
+        font-size: 45px;
+        font-weight: 700;
+    }
+    .donirajte {
+        padding: 50px 0 0;
+    }
+    .donirajte h2 {
+        margin-bottom: 15px;
+    }
+    .donirajte a {
+        font-size: 45px;
+    }
+    .donirajte .doniraj .toggle-popup {
+        padding: 12px 12px;
+        font-size: 14px;
+    }
+    .doniraj .toggle-popup {
+        padding: 12px 12px;
+        font-size: 14px;
+    }
+    .lijevo h2 {
+        font-size: 14px;
+    }
+    .menu {
+        width: 85%;
+        right: 30px;
+        top: 30px;
+    }
+    .menu a {
+        font-size: 25px;
+    }
+    .menu-toggle {
+        width: 20px;
+        height: 16px;
+    }
+    .menu-toggle-box {
+        height: 35px;
+        width: 35px;
+        right: 40px;
+        top: 40px;    
+    }
+    .menu-toggle .bar {
+        padding: 1.5px;
+    }
+    .small-menu a {
+        font-size: 16px;
+    }
+    .nacini {
+        height: 250px;
+        text-align: center;
+        font-size: 40px;
+        top: 25px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .nastupaju h2 {
+        font-size: 20px;
+    }
+    .nastupaju span {
+        font-size: 20px;
+    }   
+    .nastupaju2 h2 {
+        font-size: 18px;
+    }
+    .nastupaju2 span {
+        font-size: 22px;
+    }    
+    .lijevo img {
+        padding: 70px 0 20px 0px;
+    }
+    .hug {
+        width: 100%;
+    }
+    .donacija-box p {
+        padding: 20px 0;
+        line-height: 1.2;
+        text-align: center;
+        text-wrap: balance;
+    }
+    .donacija .flex {
+        display: flex;
+        padding-bottom: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .donacija-box {
+        padding: 15px;
+    }
+    .donacija-box.poziv a {
+        font-size:  40px;
+        font-weight: 900;
+    }
+    .glavna {
+        flex-direction: column-reverse;
+        padding: 20px 20px 0 20px;
+    }
+    .zajedno img {
+        margin-left: 0;
+    }
+    .zajedno {
+        width: 100%;
+    }
+    .humanitarno {
+        width: 100%;
+        padding: 30px 0 0;
+    }
+    .container-donacija {
+        font-size: 20px;
+        margin-left: 0;
+        width: 100%;
+    }
+    .number {
+        width: 45px;
+        height: 45px;
+        margin-right: 0;
+    }
+    .text {
+        padding: 15px;
+        font-size: 16px;
+    }
+    .text h3 {
+        font-size: 20px;
+    }
+    .saznaj-vise {
+        margin: 25px 0 20px;
+    }
+    .saznaj-vise a {
+        font-weight: 700;
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+    .copyright {
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+    .footer-text {
+        font-size: 20px;
+        padding: 0;
+    }
+    .javite-nam-se {
+        margin-top: 15px;
+    }
+    .javite-nam-se a {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+    .footer-slike {
+        display: block;
+        text-align: center;
+    }
+    .footer-slike img {
+        margin: 25px 20px 0 20px;
+        padding-left: 0;
+        height: 5vh;
+    }
+    .pozadina .bijeli-logo {
+        padding: 0;
+        top: 30px;
+    }
+    .donacija-popup .container .donacija-slika {
+        margin-bottom: 12px;
+        margin-right: 0;
+    }
+    .donacija-popup .container .donacija-uplata {
+        margin-left: 0;
+    }
+    .donacija-popup .container {
+        height: 550px;
+        display: block;
+    }
+    .donacija-slika {
+        width: 50%;
+    }
+    .donacija-uplata {
+        width: 50%;
+        padding: 15px;
+    }
+    .donacija-text {
+        padding: 15px;
+        font-size: 16px;
+    }
+    .donacija-text h3 {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    .donacija-uplata h3 {
+        padding: 0;
+        font-size: 18px;
+        text-align: left;
+    }
+    .donacija-uplata p {
+        font-size: 18px;
+    }
+    .cards {
+        margin: 0;
+    }
+    .card label {
+        font-size: 22px;
+        padding: 15px;
+    }
+    .card label span {
+        font-size: 18px;
+        margin: 0;
+    }
+    .card:not(:last-child) {
+        margin-right: 30px;
+    }
+    .iznos input {
+        margin: 15px 0;
+    }
+    input[type=radio] {
+        position: absolute;
+    }
+    input[type=number] {
+        padding: 10px;
+        font-size: 20px;
+    }
+    .donacija-uplata p:last-of-type {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .donacija-uplata .button {
+        font-size: 18px;
+        border: 1.5px solid #000;
+    }
+    .naslov-flex {
+        margin-bottom: 15px;
+    }
+    .close-popup img {
+        width: 22px;
+    }
+
+
+    .o-projektu h2 {
+        font-size: 30px;
+        font-weight: 700;
+        text-wrap: nowrap;
+        padding-bottom: 20px;
+    }
+    .o-projektu {
+        padding: 30px;
+        font-size: 16px;
+    }
+    .cilj-akcije {
+        padding: 30px;
+        font-size: 16px;
+    }
+    .container-prijava {
+        margin: 20px;
+    }
+    .donirajte-prijava {
+        padding: 50px 0 20px 0;
+    }
+    .donirajte-prijava h2 {
+        margin-bottom: 0;
+    }
+    
+    .donirajte-prijava .doniraj .toggle-popup {
+        padding: 12px 12px;
+        font-size: 14px;
+    }
+    .empatija-prijava {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .empatija-prijava img {
+        padding: 20px 0px;
+    }
+    .humanitarna-akcija {
+        display: block;
+    }
+    
+}
+
+@media only screen and (max-width: 991px) {
+    .lijevo {
+        flex-direction: column;
+        margin-right: 0;
+        width: 100%;
+    }
+    .desno {
+        width: 100%;
+    }
+    .zajedno img {
+        margin-left: 0;
+    }
+    .zajedno {
+        width: 100%;
+    }
+    .humanitarno {
+        width: 100%;
+        padding: 0;
+    }
+    .container-donacija {
+        margin-left: 0; 
+        font-size: 24px;
+        width: 100%;
+    }
+    .number {
+        width: 45px;
+        height: 45px;
+        margin-right: 0;
+    }
+    
+    .saznaj-vise {
+        margin: 25px 0 15px;
+    }
+    .text {
+        padding: 15px;
+    }
+    .text h3 {
+        font-size: 20px;
+        word-break: break-word;
+        margin-bottom: 12px;
+    }
+    .text p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+    .o-projektu h2 {
+        font-size: 30px;
+        font-weight: 700;
+        text-wrap: nowrap;
+        padding-bottom: 20px;
+    }
+    .o-projektu {
+        padding: 30px;
+        font-size: 16px;
+    }
+    .cilj-akcije {
+        padding: 30px;
+        font-size: 16px;
+    }
+    .container-prijava {
+        margin: 20px;
+    }
+    .donirajte-prijava {
+        padding: 50px 0 20px 0;
+    }
+    .donirajte-prijava h2 {
+        margin-bottom: 0;
+    }
+    
+    .donirajte-prijava .doniraj .toggle-popup {
+        padding: 12px 12px;
+        font-size: 14px;
+    }
+    .empatija-prijava {
+        margin-top: 20px;
+        width: 100%;
+        margin-left: 0;
+    }
+    .empatija-prijava img {
+        padding: 20px 0px;
+        width: 60%;
+    }
+    .humanitarna-akcija {
+        display: block;
+    }
+    .projekt-flex {
+        margin-right: 0;
+    }
+    .copyright {
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+    .footer-text {
+        font-size: 20px;
+        padding: 0;
+    }
+    .javite-nam-se {
+        margin-top: 15px;
+    }
+    .javite-nam-se a {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+    .footer-slike {
+        display: block;
+        text-align: center;
+    }
+    .footer-slike img {
+        margin: 25px 20px 0 20px;
+        padding-left: 0;
+        height: 5vh;
+    }
+    .pozadina .bijeli-logo {
+        padding: 0;
+        top: 30px;
+    }
+    .donacija .container {
+        display: block;
+    }
+    .donacija-popup .container .donacija-slika {
+        margin-right: 0;
+        height: 260px;
+        margin-bottom: 12px;
+        width: 100%;
+    }
+    .donacija-popup .container .donacija-uplata {
+        height: 370px;
+        width: 100%;
+    }
+    .donacija-popup .container {
+        height: 100%;
+    }
+    .donacija-slika {
+        width: 50%;
+    }
+    .donacija-uplata {
+        width: 50%;
+        padding: 15px;
+    }
+    
+    .cards {
+        margin: 0;
+    }
+    .card label {
+        font-size: 22px;
+        padding: 15px;
+    }
+    .card label span {
+        font-size: 18px;
+        margin: 0;
+    }
+    
+    .iznos input {
+        margin: 15px 0;
+    }
+    input[type=radio] {
+        position: absolute;
+    }
+    input[type=number] {
+        padding: 10px;
+        font-size: 20px;
+    }
+    .donacija-uplata p:last-of-type {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .donacija-uplata .button {
+        font-size: 18px;
+        border: 1.5px solid #000;
+    }
+    .naslov-flex {
+        margin-bottom: 15px;
+    }
+    .close-popup img {
+        width: 22px;
+    }
+    .o-projektu h2 {
+        font-size: 30px;
+        font-weight: 700;
+        text-wrap: nowrap;
+        padding-bottom: 20px;
+    }
+    .o-projektu {
+        padding: 30px;
+        font-size: 16px;
+    }
+    .cilj-akcije {
+        padding: 30px;
+        font-size: 16px;
+    }
+    .container-prijava {
+        margin: 20px;
+    }
+    .donirajte-prijava {
+        padding: 50px 0 20px 0;
+    }
+    .donirajte-prijava h2 {
+        margin-bottom: 0;
+    }
+
+    .donirajte-prijava .doniraj .toggle-popup {
+        padding: 12px 12px;
+        font-size: 14px;
+    }
+    .empatija-prijava {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .empatija-prijava img {
+        padding: 20px 0px;
+    }
+    .humanitarna-akcija {
+        display: block;
+    }
+    .projekt-flex {
+        margin-right: 0;
+    }
+    .clanci {
+        margin: 0 0 16px 0;
+        width: 100%;
+    }
+    .col-50 {
+        padding: 0 5px;
+        width: 50%;
+    }
+    .clanci-flex{
+        margin: 0 -5px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .menu-toggle {  
+        width: 30px;
+        height: 24px;
+    }
+    .glavna {
+        flex-direction: column-reverse;
+        padding: 20px 20px 0 20px;
+    }
+    .container {
+        display: block;
+        margin: 30px;
+    }
+    .desno {
+        width: 100%;
+        margin-top: 30px;
+        height: 500px;
+    }
+    
+    .donirajte {
+        padding: 120px 0 0 0;
+    }
+
+    .donirajte h2 {
+        margin-bottom: 0;
+    }
+    .menu {
+        width: 80%;
+        right: 75px;
+        top: 45px;
+    }
+    .menu-toggle-box {
+        right: 90px;
+        top: 60px;
+    }
+    .donacija-text {
+        padding: 35px 20px;
+        font-size: 16px;
+    }
+    .donacija .flex {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding-bottom: 0;
+        flex-direction: column;
+    }
+    .donirajte span {
+        font-size: 50px;
+    }
+    .donacija-box.poziv a {
+        font-size: 40px;
+    }  
+    .doniraj .toggle-popup {
+        text-decoration: none;
+        padding: 15px 30px;
+    }
+    .card:not(:last-child) {
+        margin-right: 60px;
+    }
+    
+    
+    .nacini {
+        height: 250px;
+        text-align: center;
+        font-size: 50px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .nastupaju h2 {
+        font-size: 40px;
+    }
+    .nastupaju span {
+        font-size: 40px;
+    }   
+    .nastupaju2 h2 {
+        font-size: 18px;
+    }
+    .nastupaju2 span {
+        font-size: 16px;
+    }
+    .hug {
+        width: 100%;
+    }    
+    .donacija .container {
+        display: block;
+    }
+    .donacija-popup .container .donacija-slika {
+        margin-right: 0;
+        height: 400px;
+        margin-bottom: 12px;
+        width: 100%;
+    }
+    .donacija-popup .container .donacija-uplata {
+        height: 550px;
+        width: 100%;
+        margin-left: 0;
+    }
+    .donacija-popup .container {
+        display: block;
+    }
+    .donacija-slika {
+        width: 50%;
+    }
+    .donacija-uplata {
+        width: 50%;
+        padding: 15px;
+    }
+    .donacija-text {
+        padding: 15px;
+        font-size: 18px;
+    }
+    .donacija-text h3 {
+        margin-top: 10px;
+        font-size: 28px;
+    }
+    .donacija-uplata p {
+        font-size: 26px;
+    }
+    .donacija-uplata h3 {
+        padding: 0;
+        font-size: 40px;
+    }
+    .card label {
+        font-size: 40px;
+        padding: 30px;
+    }
+    .pozadina .bijeli-logo {
+        width: 60%;
+    }
+    
+}
+
